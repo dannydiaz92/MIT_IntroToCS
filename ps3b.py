@@ -1,3 +1,5 @@
+# 6.00 Problem Set 3B
+
 from ps3a import *
 import time
 from perm import *

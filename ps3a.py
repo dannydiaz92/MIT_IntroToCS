@@ -1,9 +1,7 @@
-# 6.00 Problem Set 3A Solutions
+# 6.00 Problem Set 3A
 #
 # The 6.00 Word Game
-# Created by: Kevin Luu <luuk> and Jenna Wiens <jwiens>
-#
-#
+
 
 import random
 import string
