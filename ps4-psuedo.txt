@@ -1,0 +1,20 @@
+Your algorithms should be plain English explanations for the steps your program will take to solve these problems.
+
+Write out your algorithm for Problem 2 here:
+
+Write and algorithm that decodes the maximum number of english words
+
+
+for shift in range (1, 26)
+    for letter in list shift by shift
+        add letter to decrypted list
+        count number of valid words
+key = shift with max valid words
+
+
+Write out your algorithm for Problem 4 here:
+
+for shift in range(1,26)
+    for word in list
+        for letter in word
+            shift by shift
