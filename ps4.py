@@ -320,14 +320,14 @@ def find_best_shift(wordlist, text):
     best_shift = 0
     for shift in range(0,27):
         decodeDict = build_decoder(shift)
-        decryptedText = ''
+        encryptedText = ''
         for letter in text:
             if letter != ' ' and letter.isalpha() is False:
-                decryptedText += letter
+                encryptedText += letter
             else:
-                decryptedText += decodeDict.get(letter)
+                encryptedText += decodeDict.get(letter)
         #Listwords = decryptedText.split()
-        Listwords = re.findall(r"[\w']+", decryptedText)
+        Listwords = re.findall(r"[\w']+", encryptedText)
         print 'shift: ', shift, 'Listwords: ', Listwords
         for word in Listwords:
             if is_word(wordlist, word) is True:
@@ -342,9 +342,9 @@ def find_best_shift(wordlist, text):
 
     return apply_coder(text, build_decoder(best_shift))
 
-s = apply_coder('Hello, world!', build_encoder(8))
-print 's: ', s
-print 'find_best_shift(wordlist, s): ', find_best_shift(wordlist, s)
+#s = apply_coder('Hello, world!', build_encoder(8))
+#print 's: ', s
+#print 'find_best_shift(wordlist, s): ', find_best_shift(wordlist, s)
 
    
 #
@@ -367,7 +367,15 @@ def apply_shifts(text, shifts):
     'JufYkaolfapxQdrnzmasmRyrpfdvpmEurrb?'
     """
     ### TODO.
+    print 'in apply_shifts: '
+    encryptedText = ''
+    for tupleI in range(len(shifts)):
+        #print text[shifts[tupleI][0]:]
+        text = text[:shifts[tupleI][0]] + apply_shift(text[shifts[tupleI][0]:], shifts[tupleI][1])
+        #print text
+        #print '*******************'
 
+#apply_shifts("Do Androids Dream of Electric Sheep?", [(0,6), (3, 18), (12, 16)])
  
 #
 # Problem 4: Multi-level decryption.
@@ -402,6 +410,7 @@ def find_best_shifts(wordlist, text):
     >>> print apply_shifts(s, shifts)
     Do Androids Dream of Electric Sheep?
     """
+
 
 def find_best_shifts_rec(wordlist, text, start):
     """
