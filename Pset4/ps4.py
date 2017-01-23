@@ -1,14 +1,6 @@
 # 6.00 Problem Set 4
 #
 # Caesar Cipher Skeleton
-#
-#Time log:
-# Tuesday August 9th: 11:10 pm - 11:50pm
-# Wednesday August 10th : 10:00 pm - 11:00pm
-# Sunday 10:15 am - 11:20 am
-# Sunday 12:20 - 1:10 pm
-# Sunday 1:30 - 2:20 pm
-# October 4th 9:30 - 10:25 pm
 
 import string
 import random
